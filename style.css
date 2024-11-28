@@ -36,6 +36,49 @@ header
     height: 200vh;
     color: white;
     background-color: #4b4b4b;
+
+    .grid-cards
+    {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: (2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-areas: 
+        "card-one       card-two"
+        "card-three     card-four"
+        "card-five      card-six";
+        margin: auto;
+        background-color: red;
+    }
+    .grid-card
+    {
+        background-color: blue;
+    }
+    .card-one
+    {
+        grid-area: card-one;
+    }
+    .card-two
+    {
+        grid-area: card-two;
+    }
+    .card-three
+    {
+        grid-area: card-three;
+    }
+    .card-four
+    {
+        grid-area: card-four;
+    }
+    .card-five
+    {
+        grid-area: card-five;
+    }
+    .card-six
+    {
+        grid-area: card-six;
+    }
+    
 }
 footer
 {
