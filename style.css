@@ -37,47 +37,73 @@ header
     color: white;
     background-color: #4b4b4b;
 
-    .grid-cards
+    .tittle-one
+    {
+        display: flex;
+        justify-content: center;
+        font-size: 24px;
+    }
+    .grid-cards-inner-one
     {
         display: grid;
-        grid-gap: 10px;
-        grid-template-columns: (2, 1fr);
-        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: 460px 460px;
+        grid-template-rows: 200px 200px 200px;
         grid-template-areas: 
-        "card-one       card-two"
-        "card-three     card-four"
-        "card-five      card-six";
+        "card-a-one       card-a-two"
+        "card-a-three     card-a-four"
+        "card-a-five      card-a-six";
+        justify-content: space-between;
         margin: auto;
-        background-color: red;
+        max-width: 960px;
+        background-color: rgb(125, 125, 255);
+
+        .grid-card
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px;
+            padding: 30px;
+            background-color: rgb(255, 79, 79);
+
+            .sign-a-card
+            {
+                font-size: 48px;
+                margin: 10px;
+            }
+            .card-a-one
+            {
+                grid-area: card-a-one;
+    
+            }
+            .card-a-two
+            {
+                grid-area: card-a-two;
+
+            }
+            .card-a-three
+            {
+                grid-area: card-a-three;
+
+            }
+            .card-a-four
+            {
+                grid-area: card-a-four;
+
+            }
+            .card-a-five
+            {
+                grid-area: card-a-five;
+
+            }
+            .card-a-six
+            {
+                grid-area: card-a-six;
+
+            }
+        }
     }
-    .grid-card
-    {
-        background-color: blue;
-    }
-    .card-one
-    {
-        grid-area: card-one;
-    }
-    .card-two
-    {
-        grid-area: card-two;
-    }
-    .card-three
-    {
-        grid-area: card-three;
-    }
-    .card-four
-    {
-        grid-area: card-four;
-    }
-    .card-five
-    {
-        grid-area: card-five;
-    }
-    .card-six
-    {
-        grid-area: card-six;
-    }
+    
     
 }
 footer
