@@ -14,13 +14,13 @@
   <!--   JS -->
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="50" height="50"/> 
   <!--   NODE JS -->
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="50" height="50"/> 
+  <img src="https://github.com/user-attachments/assets/9e430ea3-e13d-4fc8-b9b5-38be24c971eb" alt="nodejs" width="50" height="50"/> 
   <!--   TYPESCRIPT -->
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="50" height="50"/> 
   <!--   FIGMA -->
   <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="50" height="50"/> 
   <!--   PHOTOSHOP -->
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="50" height="50"/> 
+  <img src="https://github.com/user-attachments/assets/9ea15aa0-423e-4bad-ad3c-ec97e04d8053" alt="photoshop" width="50" height="50"/> 
   <!--   ADOBE AI -->
   <img src="https://www.vectorlogo.zone/logos/adobe_illustrator/adobe_illustrator-icon.svg" alt="illustrator" width="50" height="50"/> 
   
