@@ -1,5 +1,5 @@
-<h3 align="center">About</h3>
-
+<h3 align="left">About</h3>
+<p align="left">A simple website for a company providing pickup point management services</p>
 <h3 align="left">Preview (free host)</h3>
 
 <p align="left">
