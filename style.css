@@ -7,16 +7,14 @@
 }
 .wrapper
 {
-    /* background-color: #4b4b4b; */
+    display: '';
 }
 header
 {
-
     .header-inner
     {
         display: flex;
         justify-content: center;
-        background-color: #9900ff49;
 
         ul
         {
@@ -35,11 +33,10 @@ header
     }
     
 }
-.middle-inner
+.middle
 {
-    height: 200vh;
+    height: 100vh;
     color: white;
-    background-color: #4b4b4b;
 
     .block-one
     {
@@ -62,33 +59,50 @@ header
             {
                 display: '';
             }
-            .comment-one
+            .comment
             {
                 position: absolute;
-                top: 250px;
-                right: 240px;
                 width: 360px;
+                margin: 0px;
+                padding: 0px;
+            }
+            .comment-inner
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                background-color: white;
+            }
+            .comment-p
+            {
+                color: black;
+            }
+            .comment-a
+            {
+                top: 200px;
+                right: 260px;
                 padding-left: 40px;
                 background-color: rgb(255, 145, 145);
-                
-                .comment-one-inner
-                {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 20px;
-                    background-color: white;
-                }
-
-                .comment-one-p
-                {
-                    color: black;
-                    animation-timing-function: ;
-                }
             }
+            .comment-b
+            {
+                top: 350px;
+                right: 240px;
+                padding-left: 40px;
+                background-color: rgb(255, 145, 145);
+            }
+            .comment-c
+            {
+                top: 520px;
+                right: 260px;
+                padding-left: 40px;
+                background-color: rgb(255, 145, 145);
+            }
+            
         }
 
-    .grid-cards-inner-one
+    /* .grid-cards-inner-one
     {
         display: grid;
         grid-template-columns: 460px 460px;
@@ -147,7 +161,7 @@ header
 
             }
         }
-    }
+    } */
     
     
 }
