@@ -10,7 +10,7 @@
     <title>PVZPRO</title>
 </head>
 <body>
-    <wrapper>
+    <wrapper id="wrapper" class="wrapper">
         <header>
             <div class="header-inner">
                 <ul>
@@ -25,7 +25,7 @@
         </header>
 
         <div class="middle-inner">   
-            <div>
+            <!-- <div>
                 <p>Полный и профессиональный контроль ваших ПВЗ OZON</p>
                 <p>Наша команда опытных специалистов* с более чем 3-летним стажем предлагает комплексное управление пунктами выдачи заказов OZON. </p>
                 <p>Услуги, которые мы предоставляем:</p>
@@ -49,14 +49,20 @@
                     <br>
                     — Мы работаем с агентами, управляющими сетью от 15 ПВЗ.<br>
                     — География: Москва и Московская область.<br>
-            </div>
-
+            </div> -->
             <div class="block-one">
-                <img src="" alt="">
+                <div class="block-one-tittle"><p>Управление сетью ПВЗ</p></div>
+                <div class="block-one-inner">
+                    <img class="block-one-img" src="img/pvz.png" alt="image pvz"> 
+                    <div class="comment-one">
+                        <div class="comment-one-inner">
+                            <p class="comment-one-p" id="animatable">Обеспечение бесперебойной <br> работы пунктов выдачи</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="grid-cards">
-                <div class="tittle-one"><p>Управление сетью ПВЗ</p></div>
+            <!-- <div class="grid-cards">
                 <div class="grid-cards-inner-one">
                     <div class="grid-card card-a-one">
                         <span class="material-symbols-outlined sign-a-card">home</span>
@@ -112,7 +118,7 @@
                         <p></p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <footer>
@@ -123,5 +129,28 @@
             </div>
         </footer>
     </wrapper>
+
+    <script>
+        const letters = split(animatable)
+        setTimeout(() => letters.forEach(span => span.style.opacity = 1), 0)
+
+        function split(element) 
+        {
+            element.style.wordBreak = 'break-word'
+
+            const letters = element.innerText.split('').map((letter, i) => 
+            {
+                const span = document.createElement('span')
+                span.innerHTML = letter !== ' ' ? letter : '&nbsp;'
+                span.style.opacity = 0
+                span.style.transitionDelay = 0.05 * i + 's'
+                return span
+            })
+
+            element.innerHTML = ''
+            element.append(...letters)
+            return letters
+        }
+    </script>
 </body>
 </html>
