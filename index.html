@@ -54,7 +54,7 @@
             <div class="block-one">
                 <div class="block-one-tittle"><p>Управление сетью ПВЗ</p></div>
                 <div class="block-one-inner">
-                    <img class="block-one-img" src="img/pvz.png" alt="image pvz"> 
+                    <img class="block-one-img" src="img/layer-1/small/summer-full-small.png" alt="image pvz"> 
                     <!-- Comment block A -->
                     <div class="comment comment-a">
                         <div class="comment-inner comment-a-inner">
@@ -147,28 +147,5 @@
             </div>
         </footer>
     </wrapper>
-
-    <script>
-        const letters = split(animatable)
-        setTimeout(() => letters.forEach(span => span.style.opacity = 1), 0)
-
-        function split(element) 
-        {
-            element.style.wordBreak = 'break-word'
-
-            const letters = element.innerText.split('').map((letter, i) => 
-            {
-                const span = document.createElement('span')
-                span.innerHTML = letter !== ' ' ? letter : '&nbsp;'
-                span.style.opacity = 0
-                span.style.transitionDelay = 0.05 * i + 's'
-                return span
-            })
-
-            element.innerHTML = ''
-            element.append(...letters)
-            return letters
-        }
-    </script>
 </body>
 </html>
