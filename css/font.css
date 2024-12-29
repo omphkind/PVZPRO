@@ -1,0 +1,20 @@
+@font-face {
+    font-family: Flow;
+    src: url(/fonts/Flow/Regular/Flow.eot);
+    src: url(/fonts/Flow/Regular/Flow.otf);
+    src: url(/fonts/Flow/Regular/Flow.ttf);
+    src: url(/fonts/Flow/Regular/Flow.woff);
+    src: url(/fonts/Flow/Regular/Flow.woff2);
+    font-size: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: FlowBold;
+    src: url(/fonts/Flow/Regular/Flow_Bold.eot);
+    src: url(/fonts/Flow/Regular/Flow_Bold.otf);
+    src: url(/fonts/Flow/Regular/Flow_Bold.ttf);
+    src: url(/fonts/Flow/Regular/Flow_Bold.woff);
+    src: url(/fonts/Flow/Regular/Flow_Bold.woff2);
+    font-size: normal;
+    font-weight: bold;
+}

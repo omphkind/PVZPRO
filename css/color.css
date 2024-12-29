@@ -1,5 +1,6 @@
 :root
 {
+    --bright-green: #95c19e;
     --dark-green: #00775b;
     --dark-orange: #ff815b;
     --olivine: #9cb380ff;
@@ -10,7 +11,7 @@
 
 header
 {
-    background-color: var(--dark-green);
+    background-color: var(--bright-green);
     color: white;
 }
 .middle
@@ -19,5 +20,5 @@ header
 }
 footer
 {
-    background-color: var(--dark-green);
+    background-color: var(--bright-green);
 }
