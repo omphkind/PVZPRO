@@ -14,6 +14,10 @@ header
     background-color: var(--bright-green);
     color: white;
 }
+.header-a:hover
+{
+    color: var(--dark-green);
+}
 .middle
 {
     background-color: white;

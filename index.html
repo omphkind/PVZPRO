@@ -15,13 +15,35 @@
 <wrapper id="wrapper" class="wrapper">
     <header>
         <div class="header-inner">
-            <ul>
-                <li class="header-li"><a href="index.html">Главная</a></li>
-                <li class="header-li"><a href="index.html">Услуги</a></li>
-                <li class="header-li"><a href="index.html">Контакты</a></li>
-                <li class="header-li"><a href="index.html">О компании</a></li>
-                <li class="header-li"><a href="index.html">Номер телефона</a></li>
+            <ul class="header-ul">
+                <li class="header-li"><a class="header-a" href="index.html">Главная</a></li>
+                <li class="header-li"><a class="header-a" href="index.html">Услуги</a></li>
+                <li class="header-li"><a class="header-a" href="index.html">Контакты</a></li>
+                <li class="header-li"><a class="header-a" href="index.html">О компании</a></li>
+                <li class="header-li"><a class="header-a" href="index.html">Номер телефона</a></li>
             </ul>
+        </div>
+        <div class="nav">
+            <ul class="visible-menu">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Номер телефона</a></li>
+                <li><a href="#">Оплата</a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+            <button class="burger hidden">
+                <svg width="30" height="40">
+                <circle cx="15" cy="10" r="2" fill="#fff"></circle>
+                <circle cx="15" cy="20" r="2" fill="#fff"></circle>
+                <circle cx="15" cy="30" r="2" fill="#fff"></circle>
+                </svg>
+                <div class="burger-count"></div>
+            </button>
+            <ul class="hidden-menu"></ul>
+            </nav>
         </div>
     </header>
 
@@ -51,6 +73,48 @@
         </div>
     </footer>
 </wrapper>
+
+<script>
+    const nav = document.querySelector('.nav');
+    const vMenu = document.querySelector('.visible-menu');
+    const hMenu = document.querySelector('.hidden-menu');
+    const burger = document.querySelector('.burger');
+
+    let count = document.querySelector('.burger-count');
+    let breaks = [];
+
+    function updateNav() {
+    // получаем ширину всего меню
+    let navWidth = burger.classList.contains('hidden') ? nav.offsetWidth : nav.offsetWidth - burger.offsetWidth;
+    let vMenuWidth = vMenu.offsetWidth;
+    if (vMenuWidth > navWidth) {
+        breaks.push(vMenuWidth);
+        hMenu.prepend(vMenu.lastElementChild);
+        burger.classList.remove('hidden');
+        count.innerText = breaks.length;
+        updateNav();
+    }
+    else {
+        if (navWidth > breaks[breaks.length - 1]) {
+        breaks.pop();
+        vMenu.append(hMenu.firstElementChild);
+        count.innerText = breaks.length;
+        }
+        if (breaks.length < 1) {
+        burger.classList.add('hidden');
+        hMenu.classList.remove('active');
+        }
+    }
+    }
+
+    burger.addEventListener('click', function () {
+    hMenu.classList.toggle('active');
+    burger.classList.toggle('active');
+    });
+
+    window.addEventListener('resize', updateNav);
+    document.addEventListener('DOMContentLoaded', updateNav);
+</script>
 </body>
 </html>
 
