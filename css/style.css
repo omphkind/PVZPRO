@@ -57,9 +57,14 @@ header
 .block-one-img
 {
     grid-area: img;
-    width: 640px;
+    max-width: 640px;
+    height: auto;
     margin: 40px;
     background-color: rgb(142, 211, 142);
+}
+.block-one-img img
+{
+    max-width: 100%
 }
 .block-one-text
 {
@@ -125,4 +130,8 @@ header
         "img"
         "text";
     }
+}
+@media (max-width: 400px)
+{
+    
 }
