@@ -96,6 +96,9 @@ header
 .footer-links
 {
     grid-area: social;
+    display: flex;
+    max-width: auto;
+    max-height: auto;
     margin: 40px;
 }
 .footer-links ul
@@ -124,43 +127,29 @@ header
     .block-one
     {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
         grid-template-areas: 
         "img"
         "text";
     }
 }
 @media (max-width: 600px)
-{
-    header
-{
-    .header-inner
+{   
+    .block-one-img
     {
-        display: flex;
-        justify-content: center;
-
-        ul
-        {
-            display: inline-flex;
-        }
-        li
-        {
-            padding: 20px;
-            list-style: none;
-            font-size: 10px;
-            
-        }
-        a
-        {
-            text-decoration: none;
-            color: white;
-        }
-        li:hover
-        {
-            
-        }
+        margin: 10px;
     }
-    
+    .block-one-text
+    {
+        margin: 10px;
+    }
+    .block-one-text p
+    {
+        font-size: 18px;
+    }
 }
+@media (max-width: 400px)
+{   
+  
 }
