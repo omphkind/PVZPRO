@@ -74,6 +74,7 @@ body
     background: #a3c3ff;
     transition: 0.4s;
     transform: translateX(100%);
+    z-index: 100;
 }
 .hidden-menu.active 
 {
@@ -111,22 +112,46 @@ body
 }
 .block-one-img
 {
+    position: relative;
     grid-area: img;
     max-width: 640px;
     height: auto;
     margin: 40px;
-    background-color: rgb(142, 211, 142);
+    /* background-color: rgb(142, 211, 142); */
 }
 .block-one-img img
 {
     max-width: 100%
+}
+.garland
+{
+    
+    animation-name: garland-shine;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes garland-shine
+{
+    33%
+    {
+        filter: drop-shadow(1px 1px 5px #ffd000);
+    }
+    66%
+    {
+        filter: drop-shadow(1px 1px 5px #9900ff);
+    }
+    100%
+    {
+        filter: drop-shadow(1px 1px 5px #ff4800);
+    }
 }
 .block-one-text
 {
     grid-area: text;
     margin: 40px;
     color: black;
-    background-color: rgb(163, 163, 255);
+    /* background-color: rgb(163, 163, 255); */
 }
 .head-big
 {
@@ -204,10 +229,3 @@ body
         font-size: 18px;
     }
 }
-@media (max-width: 400px)
-{   
-  
-}
-
-
-
