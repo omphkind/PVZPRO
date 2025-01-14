@@ -26,3 +26,8 @@ footer
 {
     background-color: var(--bright-green);
 }
+.nav
+{
+    background-color: var(--bright-green);
+    color: white;
+}

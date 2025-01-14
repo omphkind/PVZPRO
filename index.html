@@ -3,6 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="title" content="PVZPRO">
+<meta name="description" content="Полный и профессиональный контроль ваших пвз">
+<meta name="keywords" content="ozon wb wildberries yandex market sdek avito озон вб вайлдберриес яндекс маркет сдэк авито">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Russian">
+
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/color.css">
 <link rel="stylesheet" href="/css/font.css">
@@ -14,25 +22,13 @@
 <body>
 <wrapper id="wrapper" class="wrapper">
     <header>
-        <div class="header-inner">
-            <ul class="header-ul">
-                <li class="header-li"><a class="header-a" href="index.html">Главная</a></li>
-                <li class="header-li"><a class="header-a" href="index.html">Услуги</a></li>
-                <li class="header-li"><a class="header-a" href="index.html">Контакты</a></li>
-                <li class="header-li"><a class="header-a" href="index.html">О компании</a></li>
-                <li class="header-li"><a class="header-a" href="index.html">Номер телефона</a></li>
-            </ul>
-        </div>
         <div class="nav">
             <ul class="visible-menu">
                 <li><a href="#">Главная</a></li>
                 <li><a href="#">Услуги</a></li>
                 <li><a href="#">Контакты</a></li>
                 <li><a href="#">О компании</a></li>
-                <li><a href="#">Номер телефона</a></li>
-                <li><a href="#">Оплата</a></li>
-                <li><a href="#">Доставка</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="tel:+79776986167">+7(977)-698-61-67</a></li>
             </ul>
             <button class="burger hidden">
                 <svg width="30" height="40">
@@ -40,11 +36,16 @@
                 <circle cx="15" cy="20" r="2" fill="#fff"></circle>
                 <circle cx="15" cy="30" r="2" fill="#fff"></circle>
                 </svg>
-                <div class="burger-count"></div>
             </button>
-            <ul class="hidden-menu"></ul>
-            </nav>
+            <ul class="hidden-menu">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">О компании</a></li>
+                <li><a href="tel:+79776986167">+7(977)-698-61-67</a></li>
+            </ul>
         </div>
+        <hr width="100%" size="1" color="black" margin-bottom="10px">
     </header>
 
     <div class="middle">   
@@ -79,8 +80,7 @@
     const vMenu = document.querySelector('.visible-menu');
     const hMenu = document.querySelector('.hidden-menu');
     const burger = document.querySelector('.burger');
-
-    let count = document.querySelector('.burger-count');
+    
     let breaks = [];
 
     function updateNav() 
@@ -93,7 +93,6 @@
             breaks.push(vMenuWidth);
             hMenu.prepend(vMenu.lastElementChild);
             burger.classList.remove('hidden');
-            count.innerText = breaks.length;
             updateNav();
         }
         else {
@@ -101,12 +100,13 @@
             {
                 breaks.pop();
                 vMenu.append(hMenu.firstElementChild);
-                count.innerText = breaks.length;
+                updateNav();
             }
             if (breaks.length < 1) 
             {
                 burger.classList.add('hidden');
                 hMenu.classList.remove('active');
+                updateNav();
             }
         }
     }
