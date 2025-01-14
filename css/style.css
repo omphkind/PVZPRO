@@ -20,9 +20,9 @@ body
     background: #d4e7ee;
     margin: 0 auto;
 }
-.nav ul 
+.nav li
 {
-    list-style: none;
+    list-style: none;;
 }
 .nav a 
 {
